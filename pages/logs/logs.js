@@ -18,6 +18,15 @@ Page({
     this.setData({
       title: '这是' + options.title + '页面'
     });
+    wx.getUserInfo({
+      withCredentials: true,
+      lang: 'zh_CN',
+      success: function(res) {
+        console.log(res);
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   },
 
   /**
