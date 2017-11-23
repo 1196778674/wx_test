@@ -42,22 +42,39 @@ Page({
           }
         });
       }
+    });
+    this.showModel();
+  },
+  showModel: function(){
+    this.setData({
+      showModal: true
     })
-    this.setData({
-      hidden: false
-    });
   },
-  cancel: function () {
-    this.setData({
-      hidden: true
-    });
-  },
-  confirm: function () {
-    this.setData({
-      nocancel: !this.data.nocancel
-    });
-    console.log("clicked confirm");
-  },
+  /**
+     * 弹出框蒙层截断touchmove事件
+     */
+    preventTouchMove: function () {
+    },
+    /**
+     * 隐藏模态对话框
+     */
+    hideModal: function () {
+      this.setData({
+        showModal: false
+      });
+    },
+    /**
+     * 对话框取消按钮点击事件
+     */
+    onCancel: function () {
+      this.hideModal();
+    },
+    /**
+     * 对话框确认按钮点击事件
+     */
+    onConfirm: function () {
+      this.hideModal();
+    },
   data: {
     imgUrls: ['../../images/app.png', '../../images/app.png', '../../images/app.png'],
     indicatorDots: false,
@@ -66,8 +83,7 @@ Page({
     duration: 200,
     screenHeight: 0,
     bodyHeight: 0,
-    hidden: true,
-    nocancel: false,
+    showModal: false,
     user: {
       avatarUrl: '',
       nickName: '',
