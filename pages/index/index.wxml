@@ -6,7 +6,7 @@
       <view class='navigato-item'>
         <image src="{{item}}" class="slide-image"/>
         <view class='item_deriction'>
-          <view class="page__bd">
+          <navigator url="../logs/logs?title={{i}}" class="page__bd">
             <view class="weui-article" style="height: {{bodyHeight}}">
                 <view class="weui-article__h1">皮肤{{i}}</view>
                 <view class="weui-article__section">
@@ -17,11 +17,11 @@
                         </view>
                     </view>
                 </view>
-                <view class="page__bd page__bd_spacing">
-                  <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>
-                </view>
             </view>
+          </navigator>
         </view>
+        <view class="page__bd page__bd_spacing">
+          <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>
         </view>
       </view>
     </swiper-item>

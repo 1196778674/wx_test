@@ -40,6 +40,7 @@
   bottom: 20px;
   width: 60%;
   left: 20%;
+  z-index: 1;
 }
 .weui-article__p{
   text-indent: 2em;

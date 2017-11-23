@@ -63,7 +63,7 @@ Page({
     indicatorDots: false,
     autoplay: false,
     interval: 100,
-    duration: 500,
+    duration: 200,
     screenHeight: 0,
     bodyHeight: 0,
     hidden: true,
