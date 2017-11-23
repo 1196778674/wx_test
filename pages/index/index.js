@@ -1,5 +1,3 @@
-var base64 = require("../../images/base64");
-
 Page({
   /**
    * 页面的初始数据
@@ -8,11 +6,16 @@ Page({
   //   list: [1,2,3,4,5,6,7,8]
   // },
   onLoad: function () {
-    this.setData({
-      icon20: base64.icon20,
-      icon60: base64.icon60
-    });
+    
+  },
+  onReady() {
     this.getSystem();
+  },
+  onShow() {
+
+  },
+  onHide(){
+
   },
   getSystem() {
     var self = this;
@@ -63,8 +66,8 @@ Page({
     ],
     indicatorDots: false,
     autoplay: false,
-    interval: 5000,
-    duration: 100,
+    interval: 100,
+    duration: 500,
     screenHeight: 0,
     bodyHeight: 0,
     hidden: true,
