@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
+    "request": 1000,
+    "downloadFile": 1000
   },
   "debug": true
 }
