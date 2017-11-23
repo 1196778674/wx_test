@@ -4,7 +4,7 @@
   <block wx:for="{{imgUrls}}" wx:for-index="i">
     <swiper-item>
       <view class='navigato-item'>
-        <!-- <image src="{{item}}" class="slide-image"/> -->
+        <image src="{{item}}" class="slide-image"/>
         <view class='item_deriction'>
           <view class="page__bd">
             <view class="weui-article" style="height: {{bodyHeight}}">
