@@ -42,6 +42,10 @@ App({
               key: 'userInfo',
               data: res.userInfo
             });
+            wx.setStorage({
+              key: 'signature',
+              data: res.signature
+            });
           }
         })
       }

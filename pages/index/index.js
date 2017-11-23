@@ -33,12 +33,19 @@ Page({
     wx.getStorage({
       key: 'userInfo',
       success: function (res) {
-        var user = res.data;
-        self.setData({
-          user: {
-            avatarUrl: user.avatarUrl,
-            nickName: user.nickName,
-            gender: user.gender
+        wx.getStorage({
+          key: 'signature',
+          success: function (d) {
+            var signature = d.data;
+            var user = res.data;
+            self.setData({
+              user: {
+                avatarUrl: user.avatarUrl,
+                nickName: user.nickName,
+                gender: user.gender,
+                signature: signature
+              }
+            });
           }
         });
       }
@@ -46,6 +53,7 @@ Page({
     this.showModel();
   },
   showModel: function(){
+    console.log(this.data);
     this.setData({
       showModal: true
     })
@@ -87,7 +95,8 @@ Page({
     user: {
       avatarUrl: '',
       nickName: '',
-      gender: ''
+      gender: '',
+      signature: ''
     }
   },
 });
