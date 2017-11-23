@@ -1,9 +1,9 @@
 App({
-
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
+    var self = this;
     if (wx.openBluetoothAdapter) {
       wx.openBluetoothAdapter()
     } else {
@@ -17,10 +17,13 @@ App({
       withCredentials: true,
       lang: 'zh_CN',
       success: function (res) {
-        console.log(res);
+        wx.setStorage({
+          key: "userInfo",
+          data: res.userInfo
+        })
       },
       fail: function (res) {
-        
+
       },
       complete: function (res) { },
     })

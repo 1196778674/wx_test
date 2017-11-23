@@ -3,7 +3,7 @@
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: {{screenHeight}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
-      <navigator url="../logs/logs?title=234" class='navigato-item' hover-class='navigator-hover'>
+      <view class='navigato-item'>
         <image src="{{item}}" class="slide-image"/>
         <view class='item_deriction'>
           <view class="page__bd">
@@ -13,29 +13,56 @@
                     <view class="weui-article__title">皮肤护理</view>
                     <view class="weui-article__section">
                         <view class="weui-article__p">
-                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
+                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
                         </view>
                     </view>
-                    <view class="weui-article__title">皮肤护理</view>
-                    <view class="weui-article__section">
-                        <view class="weui-article__p">
-                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
-                        </view>
-                    </view>
-                    <view class="weui-article__title">皮肤护理</view>
-                    <view class="weui-article__section">
-                        <view class="weui-article__p">
-                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
-                        </view>
-                    </view>
+                </view>
+                <view class="page__bd page__bd_spacing">
+                  <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>
                 </view>
             </view>
         </view>
         </view>
-      </navigator>
+      </view>
     </swiper-item>
   </block>
 </swiper>
+
+<modal hidden="{{hidden}}" confirm-text="预约" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+    <view>
+      <image class='avatar' src="{{user.avatarUrl}}"/>
+      <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <p class="weui-input">{{user.nickName}}</p>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                        <view class="weui-input">{{time}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+    </view>
+</modal>
 
 <view class="weui-footer">
   <view class="weui-footer__links">

@@ -18,13 +18,42 @@ Page({
     var self = this;
     wx.getSystemInfo({
       success: function(res) {
-        console.log(res);
         self.setData({
           screenHeight: res.screenHeight + 'px',
-          bodyHeight: res.screenHeight/2 + 'px'
+          bodyHeight: (res.screenHeight/2 - 80) + 'px',
         });
       },
     })
+  },
+  openConfrim: function(){
+    var self = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        var user = res.data;
+        self.setData({
+          user: {
+            avatarUrl: user.avatarUrl,
+            nickName: user.nickName,
+            gender: user.gender
+          }
+        });
+      }
+    })
+    this.setData({
+      hidden: false
+    });
+  },
+  cancel: function () {
+    this.setData({
+      hidden: true
+    });
+  },
+  confirm: function () {
+    this.setData({
+      nocancel: !this.data.nocancel
+    });
+    console.log("clicked confirm");
   },
   data: {
     imgUrls: [
@@ -37,6 +66,13 @@ Page({
     interval: 5000,
     duration: 100,
     screenHeight: 0,
-    bodyHeight: 0
+    bodyHeight: 0,
+    hidden: true,
+    nocancel: false,
+    user: {
+      avatarUrl: '',
+      nickName: '',
+      gender: ''
+    }
   },
 });

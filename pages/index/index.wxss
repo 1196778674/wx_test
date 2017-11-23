@@ -28,3 +28,22 @@
   padding-top: 5%;
   overflow: hidden;
 }
+.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.page__bd_spacing{
+  position: absolute;
+  bottom: 20px;
+  width: 60%;
+  left: 20%;
+}
+.weui-article__p{
+  text-indent: 2em;
+}
+.weui-cells_after-title{
+  margin-top: 20px;
+}
