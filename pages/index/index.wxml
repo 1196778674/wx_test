@@ -1,35 +1,18 @@
-<view class="page">
-    <view class="page__hd">
-        <view class="page__title">优翔产品介绍</view>
-    </view>
-    <view class="page__bd">
-        <view class="weui-panel weui-panel_access">
-            <view class="weui-panel__bd">
-                <navigator url="../logs/logs?title=1" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="{{icon60}}" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">产品介绍1</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-                <navigator url="../logs/logs?title=2" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="{{icon60}}" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">产品介绍2</view>
-                        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-                    </view>
-                </navigator>
-            </view>
-            <view class="weui-panel__ft">
-                <view class="weui-cell weui-cell_access weui-cell_link">
-                    <view class="weui-cell__bd">查看更多</view>
-                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                </view>
-            </view>
-        </view>
-    </view>
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: {{screenHeight}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <navigator url="" class='navigato-item' hover-class='navigator-hover'>
+        fsdjlfjslfj
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="weui-footer">
+  <view class="weui-footer__links">
+      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
+  </view>
+  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
 </view>

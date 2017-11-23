@@ -1,3 +1,10 @@
-.page__hd{
-  
+.navigato-item{
+  width: 80%;
+  height: 80%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  background: #ccc;
+  border-radius: 30px;
+  margin-top: 5%;
+  padding: 10px;
 }
