@@ -3,8 +3,8 @@
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: {{screenHeight}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
-      <navigator url="" class='navigato-item' hover-class='navigator-hover'>
-        fsdjlfjslfj
+      <navigator url="../logs/logs?title=234" class='navigato-item' hover-class='navigator-hover'>
+        
       </navigator>
     </swiper-item>
   </block>
