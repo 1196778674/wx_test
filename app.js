@@ -12,7 +12,18 @@ App({
         title: '提示',
         content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
       })
-    }
+    };
+    wx.getUserInfo({
+      withCredentials: true,
+      lang: 'zh_CN',
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        
+      },
+      complete: function (res) { },
+    })
   },
 
   /**

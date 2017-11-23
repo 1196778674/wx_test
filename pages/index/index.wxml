@@ -4,7 +4,34 @@
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <navigator url="../logs/logs?title=234" class='navigato-item' hover-class='navigator-hover'>
-        
+        <image src="{{item}}" class="slide-image"/>
+        <view class='item_deriction'>
+          <view class="page__bd">
+            <view class="weui-article" style="height: {{bodyHeight}}">
+                <view class="weui-article__h1">皮肤</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__title">皮肤护理</view>
+                    <view class="weui-article__section">
+                        <view class="weui-article__p">
+                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
+                        </view>
+                    </view>
+                    <view class="weui-article__title">皮肤护理</view>
+                    <view class="weui-article__section">
+                        <view class="weui-article__p">
+                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
+                        </view>
+                    </view>
+                    <view class="weui-article__title">皮肤护理</view>
+                    <view class="weui-article__section">
+                        <view class="weui-article__p">
+                            皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        </view>
       </navigator>
     </swiper-item>
   </block>

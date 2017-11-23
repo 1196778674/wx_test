@@ -20,7 +20,8 @@ Page({
       success: function(res) {
         console.log(res);
         self.setData({
-          screenHeight: res.screenHeight + 'px'
+          screenHeight: res.screenHeight + 'px',
+          bodyHeight: res.screenHeight/2 + 'px'
         });
       },
     })
@@ -34,7 +35,8 @@ Page({
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
-    duration: 1000,
-    screenHeight: 0
+    duration: 100,
+    screenHeight: 0,
+    bodyHeight: 0
   },
 });
