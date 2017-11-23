@@ -33,19 +33,14 @@ Page({
     wx.getStorage({
       key: 'userInfo',
       success: function (res) {
-        wx.getStorage({
-          key: 'signature',
-          success: function (d) {
-            var signature = d.data;
-            var user = res.data;
-            self.setData({
-              user: {
-                avatarUrl: user.avatarUrl,
-                nickName: user.nickName,
-                gender: user.gender,
-                signature: signature
-              }
-            });
+        var user = res.data;
+        var info = user.userInfo;
+        self.setData({
+          user: {
+            avatarUrl: info.avatarUrl,
+            nickName: info.nickName,
+            gender: info.gender,
+            signature: user.signature
           }
         });
       }
@@ -53,7 +48,6 @@ Page({
     this.showModel();
   },
   showModel: function(){
-    console.log(this.data);
     this.setData({
       showModal: true
     })
@@ -70,12 +64,6 @@ Page({
       this.setData({
         showModal: false
       });
-    },
-    /**
-     * 对话框取消按钮点击事件
-     */
-    onCancel: function () {
-      this.hideModal();
     },
     /**
      * 对话框确认按钮点击事件

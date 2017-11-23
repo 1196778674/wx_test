@@ -101,22 +101,16 @@
 .modal-footer {
   display: flex;
   flex-direction: row;
-  height: 86rpx;
-  border-top: 1px solid #dedede;
   font-size: 34rpx;
   line-height: 86rpx;
-}
-
-.btn-cancel {
-  width: 50%;
-  color: #666;
-  text-align: center;
-  border-right: 1px solid #dedede;
+  padding: 15px;
 }
 
 .btn-confirm {
-  width: 50%;
   color: #02AE00;
   text-align: center;
+  line-height: 2;
+  width: 70%;
+  box-shadow: 0 0 5px #ccc;
 }
 /* modal end  */

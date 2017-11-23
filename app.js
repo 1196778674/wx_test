@@ -4,8 +4,8 @@ App({
    */
   onLaunch: function () {
     //调用API从本地缓存中获取数据
-    var userInfo = wx.getStorageSync('signature') || '';
-    if (!signature) {
+    var userInfo = wx.getStorageSync('userInfo') || '';
+    if (!userInfo) {
       this.getUserInfo();
     }
   },
@@ -40,11 +40,7 @@ App({
           success: function (res) {
             wx.setStorage({
               key: 'userInfo',
-              data: res.userInfo
-            });
-            wx.setStorage({
-              key: 'signature',
-              data: res.signature
+              data: res
             });
           }
         })

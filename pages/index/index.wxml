@@ -36,12 +36,12 @@
         <image class='avatar-image'src="{{user.avatarUrl}}" />
       </view>
       <view class='forms-input'>
-        
+
       </view>
     </view>
     <view class="modal-footer">
-      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+      <!-- <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view> -->
+      <button class="weui-btn btn-confirm" type="primary" bindtap="onConfirm">预约</button>
     </view>
   </view>
   <!-- modal end  -->
