@@ -107,6 +107,19 @@
   margin-top: 20px;
 }
 
+.weui-cell_input{
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.weui-cell:before{
+  border-top: none;
+}
+
+.weui_radios{
+  margin-left: 35px;
+}
+
 .modal-footer {
   display: flex;
   flex-direction: row;
@@ -122,4 +135,22 @@
   width: 70%;
   box-shadow: 0 0 5px #ccc;
 }
+
+.weui-label-user image{
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin-right: 10px;
+}
+
+.weui-input {
+  width: 95%;
+  height:1.58823529em;
+  min-height:1.58823529em;
+  line-height:2.58823529em;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding-left: 5px;
+}
+
 /* modal end  */

@@ -38,22 +38,52 @@
 
 <!-- modal start -->
   <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
-  <view class="modal-dialog" wx:if="{{showModal}}">
+  <form bindsubmit="onConfirm" class="modal-dialog" wx:if="{{showModal}}">
     <view class="modal-title">
       预约
-      <span bindtap="closeDialog">x</span>
+      <span bindtap="closeDialog">✕</span>
     </view>
     <view class="modal-content">
       <view>
         <image class='avatar-image'src="{{user.avatarUrl}}" />
       </view>
       <view class='forms-input'>
-
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label-user">
+                <image src='{{icons.user}}' />
+              </view>
+          </view>
+          <view class="weui-cell__bd">
+              <input type="text" name="user_name" class="weui-input" value="{{user.nickName}}" placeholder="{{user.nickName}}"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label-user">
+                <image src='{{icons.phone}}' />
+              </view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="user_phone" maxlength="11" type="number" value="" placeholder="请输入手机号"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd weui_radios">
+              <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio">
+                  <radio name="user_gender" value="1"/>男
+                </label>
+                <label class="radio">
+                  <radio name="user_gender" value="2"/>女
+                </label>
+              </radio-group>
+          </view>
+        </view>
       </view>
     </view>
     <view class="modal-footer">
-      <!-- <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view> -->
-      <button class="weui-btn btn-confirm" type="primary" bindtap="onConfirm">预约</button>
+      <button class="weui-btn btn-confirm" type="primary" formType="submit">预约</button>
     </view>
-  </view>
+  </form>
   <!-- modal end  -->

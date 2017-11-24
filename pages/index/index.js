@@ -70,12 +70,31 @@ Page({
     /**
      * 对话框确认按钮点击事件
      */
-    onConfirm: function () {
-      console.log(this.data.user);
+    onConfirm: function (e) {
+      var user = e.detail.value;
+      this.setData({
+        forms_data: {
+          user_name: user.user_name,
+          user_phone: user.user_phone,
+          user_gender: this.data.user_gender,
+          signature: this.data.user.signature
+        }
+      });
+      var params = this.data.forms_data;
+      console.log(params);
       this.closeDialog();
+    },
+    radioChange: function(e){
+      this.setData({
+          user_gender: e.detail.value
+      });
     },
   data: {
     imgUrls: ['../../images/app.png', '../../images/app.png', '../../images/app.png'],
+    icons: {
+      user: '../../images/icon_user.png',
+      phone: '../../images/icon_phone.png'
+    },
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
@@ -88,6 +107,12 @@ Page({
       nickName: '',
       gender: '',
       signature: ''
-    }
+    },
+    forms_data: {
+      user_name: '',
+      user_phone: '',
+      signature: ''
+    },
+    user_gender: ''
   },
 });
