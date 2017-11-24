@@ -120,12 +120,12 @@ Page({
       var params = this.data.forms_data;
       console.log(params);
       this.closeDialog();
-      this.setData({
-        showSuccess: true
-      });
       // this.setData({
-      //   showError: true
+      //   showSuccess: true
       // });
+      this.setData({
+        showError: true
+      });
     },
     radioChange: function(e){
       this.setData({

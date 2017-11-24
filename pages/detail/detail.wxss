@@ -30,14 +30,13 @@
 }
 
 .modal-dialog {
-  width: 540rpx;
+  width: 80%;
   overflow: hidden;
   position: fixed;
-  top: 30%;
-  left: 0;
+  top: 15%;
+  left: 10%;
   z-index: 9999;
   background: #f9f9f9;
-  margin: -180rpx 105rpx;
   border-radius: 15rpx;
 }
 
@@ -121,19 +120,22 @@
 }
 .weui-msg__icon-area{
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10%;
 }
 .success-tips{
   text-align: center;
+  margin-bottom: 10%;
 }
 .text-tips{
   line-height: 1.3rem;
   padding: 0px 15px;
-  color: #666;
+  color: #333;
+  font-size: 14px;
 }
 .text-tips-error{
   text-align: center;
   width: 100%;
-  color: #666;
+  color: #333;
+  font-size: 14px;
 }
 /* modal end  */
