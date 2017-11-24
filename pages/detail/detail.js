@@ -18,6 +18,8 @@ Page({
       phone: '../../images/icon_phone.png'
     },
     showModal: false,
+    showError: false,
+    showSuccess: false,
     user: {
       avatarUrl: '',
       nickName: '',
@@ -109,6 +111,12 @@ Page({
     var params = this.data.forms_data;
     console.log(params);
     this.closeDialog();
+    this.setData({
+      showSuccess: true
+    });
+    // this.setData({
+    //   showError: true
+    // });
   },
   radioChange: function (e) {
     this.setData({
@@ -116,7 +124,22 @@ Page({
     });
   },
 
-
+  /**
+  * 关闭失败按钮
+  */
+  closeDialogError: function () {
+    this.setData({
+      showError: false
+    });
+  },
+  /**
+   * 关闭成功按钮
+   */
+  closeDialogSuccess: function () {
+    this.setData({
+      showSuccess: false
+    });
+  },
   /**
    * 用户点击右上角分享
    */

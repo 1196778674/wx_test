@@ -37,7 +37,7 @@
 
 
 <!-- modal start -->
-<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+ <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
   <form bindsubmit="onConfirm" class="modal-dialog" wx:if="{{showModal}}">
     <view class="modal-title">
       预约
@@ -85,5 +85,41 @@
     <view class="modal-footer">
       <button class="weui-btn btn-confirm" type="primary" formType="submit">预约</button>
     </view>
-  </form>
+  </form> 
   <!-- modal end  -->
+
+<!-- sucess start  -->
+ <view class="modal-mask" wx:if="{{showSuccess}}"></view>
+  <view class="modal-dialog" wx:if="{{showSuccess}}">
+    <view class="modal-title">
+      <span bindtap="closeDialogSuccess">✕</span>
+    </view>
+    <view class="modal-content">
+      <view class="weui-msg__icon-area">
+        <icon type="success" size="93"></icon>
+      </view>
+      <view class='success-tips'>预约成功</view>
+    </view>
+    <view class="modal-footer">
+      <text class='text-tips'>之后将有客户经理和您确定具体信息，请您保持手机通畅</text>
+    </view>
+  </view> 
+  <!-- sucess end  -->
+
+  <!-- error start  -->
+<view class="modal-mask" wx:if="{{showError}}"></view>
+  <view class="modal-dialog" wx:if="{{showError}}">
+    <view class="modal-title">
+      <span bindtap="closeDialogError">✕</span>
+    </view>
+    <view class="modal-content">
+      <view class="weui-msg__icon-area">
+        <icon type="warn" size="93"></icon>
+      </view>
+      <view class='success-tips'>预约失败</view>
+    </view>
+    <view class="modal-footer">
+      <text class='text-tips-error'>请重新进行预约!</text>
+    </view>
+  </view>
+  <!-- error end  -->

@@ -153,5 +153,21 @@
   border-radius:5px;
   padding-left: 5px;
 }
-
+.weui-msg__icon-area{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.success-tips{
+  text-align: center;
+}
+.text-tips{
+  line-height: 1.3rem;
+  padding: 0px 15px;
+  color: #666;
+}
+.text-tips-error{
+  text-align: center;
+  width: 100%;
+  color: #666;
+}
 /* modal end  */

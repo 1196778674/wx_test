@@ -120,10 +120,32 @@ Page({
       var params = this.data.forms_data;
       console.log(params);
       this.closeDialog();
+      this.setData({
+        showSuccess: true
+      });
+      // this.setData({
+      //   showError: true
+      // });
     },
     radioChange: function(e){
       this.setData({
           user_gender: e.detail.value
+      });
+    },
+    /**
+     * 关闭失败按钮
+     */
+    closeDialogError: function(){
+      this.setData({
+        showError: false
+      });
+    },
+    /**
+     * 关闭成功按钮
+     */
+    closeDialogSuccess: function () {
+      this.setData({
+        showSuccess: false
       });
     },
   data: {
@@ -138,7 +160,6 @@ Page({
     duration: 200,
     screenHeight: 0,
     bodyHeight: 0,
-    showModal: false,
     user: {
       avatarUrl: '',
       nickName: '',
@@ -150,6 +171,9 @@ Page({
       user_phone: '',
       signature: ''
     },
-    user_gender: ''
+    user_gender: '',
+    showModal: false,
+    showError: false,
+    showSuccess: false
   },
 });
