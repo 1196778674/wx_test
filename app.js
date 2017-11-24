@@ -7,7 +7,21 @@ App({
     var userInfo = wx.getStorageSync('userInfo') || '';
     if (!userInfo) {
       this.getUserInfo();
-    }
+    };
+    // 检查网络
+    wx.getNetworkType({
+      success: function (res) {
+        var net = res.networkType;
+        if (net != '4g' && net != 'wifi') {
+          wx.showLoading({
+            title: '当前网络环境较差',
+          });
+          setTimeout(function () {
+            wx.hideLoading()
+          }, 1500)
+        }
+      }
+    })
   },
 
   /**
