@@ -60,7 +60,7 @@ Page({
     /**
      * 隐藏模态对话框
      */
-    hideModal: function () {
+    closeDialog: function () {
       this.setData({
         showModal: false
       });
@@ -69,13 +69,14 @@ Page({
      * 对话框确认按钮点击事件
      */
     onConfirm: function () {
-      this.hideModal();
+      console.log(this.data.user);
+      this.closeDialog();
     },
   data: {
     imgUrls: ['../../images/app.png', '../../images/app.png', '../../images/app.png'],
     indicatorDots: false,
-    autoplay: false,
-    interval: 100,
+    autoplay: true,
+    interval: 5000,
     duration: 200,
     screenHeight: 0,
     bodyHeight: 0,

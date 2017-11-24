@@ -26,11 +26,23 @@
       </view>
     </swiper-item>
   </block>
+</swiper>
 
-  <!-- modal start -->
+<view class="weui-footer">
+  <view class="weui-footer__links">
+      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
+  </view>
+  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
+</view>
+
+
+<!-- modal start -->
   <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
   <view class="modal-dialog" wx:if="{{showModal}}">
-    <view class="modal-title">预约</view>
+    <view class="modal-title">
+      预约
+      <span bindtap="closeDialog">x</span>
+    </view>
     <view class="modal-content">
       <view>
         <image class='avatar-image'src="{{user.avatarUrl}}" />
@@ -45,12 +57,3 @@
     </view>
   </view>
   <!-- modal end  -->
-</swiper>
-
-
-<view class="weui-footer">
-  <view class="weui-footer__links">
-      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
-  </view>
-  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
-</view>
