@@ -98,7 +98,7 @@
 .btn-confirm {
   color: #02AE00;
   text-align: center;
-  line-height: 2;
+  line-height: 2.5;
   width: 70%;
   box-shadow: 0 0 5px #ccc;
 }
