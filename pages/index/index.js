@@ -48,10 +48,32 @@ Page({
     this.showModel();
   },
   showModel: function(){
-    this.setData({
-      showModal: true,
-      interval: false
-    })
+    var self = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: function(res){
+        if (res.data.signature) {
+          self.setData({
+            showModal: true,
+            interval: false
+          })
+        }
+      },
+      fail: function (res) {
+        wx.showModal({
+          title: '提示',
+          content: '授权失败，请重新授权',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+
+      },
+    });
   },
   /**
      * 弹出框蒙层截断touchmove事件
