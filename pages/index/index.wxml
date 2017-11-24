@@ -4,9 +4,8 @@
   <block wx:for="{{imgUrls}}" wx:for-index="i">
     <swiper-item>
       <view class='navigato-item'>
-        <image src="{{item}}" class="slide-image"/>
+         <image src="{{item}}" class="slide-image"/> 
         <view class='item_deriction'>
-        <!-- url="../detail/detail?title={{i}}"  -->
           <view class="page__bd" bindtap="showDetail" data-id="{{i}}" data-name="测试详情">
             <view class="weui-article" style="height: {{bodyHeight}}">
                 <view class="weui-article__h1">皮肤{{i}}</view>
