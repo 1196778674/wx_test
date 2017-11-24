@@ -124,7 +124,7 @@
 }
 .success-tips{
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .text-tips{
   line-height: 1.3rem;
