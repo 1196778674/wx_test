@@ -49,7 +49,8 @@ Page({
   },
   showModel: function(){
     this.setData({
-      showModal: true
+      showModal: true,
+      interval: false
     })
   },
   /**
@@ -62,7 +63,8 @@ Page({
      */
     closeDialog: function () {
       this.setData({
-        showModal: false
+        showModal: false,
+        interval: 5000
       });
     },
     /**
