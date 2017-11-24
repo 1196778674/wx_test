@@ -1,0 +1,98 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view>
+  <view class="weui-banner">
+    <image src='../../images/app.png'></image>
+  </view>
+  <view class="weui-article" style="height: {{bodyHeight}}">
+      <view class="weui-article__h1">皮肤{{i}}</view>
+      <view class="weui-article__section">
+          <view class="weui-article__title">皮肤护理</view>
+          <view class="weui-article__section">
+              <view class="weui-article__p">
+                  皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
+              </view>
+          </view>
+          <view class="weui-article__section">
+              <view class="weui-article__p">
+                  皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
+              </view>
+          </view>
+          <view class="weui-article__section">
+              <view class="weui-article__p">
+                  皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
+              </view>
+          </view>
+          <view class="weui-article__section">
+              <view class="weui-article__p">
+                  皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
+              </view>
+          </view>
+          <view class="weui-article__section">
+              <view class="weui-article__p">
+                  皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮肤护理皮
+              </view>
+          </view>
+      </view>
+  </view>
+   <view class="page__bd page__bd_spacing">
+          <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>
+        </view>
+</scroll-view>
+<view class="weui-footer">
+  <view class="weui-footer__links">
+      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
+  </view>
+  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
+</view>
+
+<!-- modal start -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <form bindsubmit="onConfirm" class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">
+      预约
+      <span bindtap="closeDialog">✕</span>
+    </view>
+    <view class="modal-content">
+      <view>
+        <image class='avatar-image'src="{{user.avatarUrl}}" />
+      </view>
+      <view class='forms-input'>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label-user">
+                <image src='{{icons.user}}' />
+              </view>
+          </view>
+          <view class="weui-cell__bd">
+              <input type="text" name="user_name" class="weui-input" value="{{user.nickName}}" placeholder="{{user.nickName}}"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label-user">
+                <image src='{{icons.phone}}' />
+              </view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="user_phone" maxlength="11" type="number" value="" placeholder="请输入手机号"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd weui_radios">
+              <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio">
+                  <radio name="user_gender" value="1"/>男
+                </label>
+                <label class="radio">
+                  <radio name="user_gender" value="2"/>女
+                </label>
+              </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <button class="weui-btn btn-confirm" type="primary" formType="submit">预约</button>
+    </view>
+  </form>
+  <!-- modal end  -->
