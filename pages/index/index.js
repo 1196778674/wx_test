@@ -1,5 +1,15 @@
 Page({
   /**
+   * 跳转详情
+   */
+  showDetail: function(e){
+    var id = e.currentTarget.dataset.id,
+      name = e.currentTarget.dataset.name;
+    wx.navigateTo({
+      url: '../detail/detail?id=' + id + '&name=' + name
+    })
+  },
+  /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
@@ -19,23 +29,8 @@ Page({
       }
     }
   },
-  /**
-   * 页面的初始数据
-   */
-  // data: {
-  //   list: [1,2,3,4,5,6,7,8]
-  // },
-  onLoad: function () {
-    
-  },
   onReady() {
     this.getSystem();
-  },
-  onShow() {
-
-  },
-  onHide(){
-
   },
   getSystem() {
     var self = this;

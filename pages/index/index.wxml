@@ -6,7 +6,8 @@
       <view class='navigato-item'>
         <image src="{{item}}" class="slide-image"/>
         <view class='item_deriction'>
-          <navigator url="../detail/detail?title={{i}}" class="page__bd">
+        <!-- url="../detail/detail?title={{i}}"  -->
+          <view class="page__bd" bindtap="showDetail" data-id="{{i}}" data-name="测试详情">
             <view class="weui-article" style="height: {{bodyHeight}}">
                 <view class="weui-article__h1">皮肤{{i}}</view>
                 <view class="weui-article__section">
@@ -18,7 +19,7 @@
                     </view>
                 </view>
             </view>
-          </navigator>
+          </view>
         </view>
         <view class="page__bd page__bd_spacing">
           <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>

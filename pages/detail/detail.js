@@ -1,10 +1,18 @@
 // pages/detail/detail.js
 Page({
-
+  /**
+   * 获取参数
+   */
+  onLoad: function(opt){
+    this.setData({
+      options: opt
+    });
+  },
   /**
    * 页面的初始数据
    */
   data: {
+    options: {},
     icons: {
       user: '../../images/icon_user.png',
       phone: '../../images/icon_phone.png'
@@ -113,9 +121,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
+    var opt = this.data.options;
     return {
-      title: '详情',
-      path: '/pages/detail/detail?id=123',
+      title: opt.name,
+      path: '/pages/detail/detail?id=' + opt.id,
       success: function (res) {
         wx.updateShareMenu({
           withShareTicket: true,
