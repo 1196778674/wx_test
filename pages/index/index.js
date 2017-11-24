@@ -1,5 +1,25 @@
 Page({
   /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    return {
+      title: '产品介绍',
+      path: '/pages/index/index',
+      success: function (res) {
+        wx.updateShareMenu({
+          withShareTicket: true,
+          success(res) {
+            console.log(res);
+          }
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
+  /**
    * 页面的初始数据
    */
   // data: {

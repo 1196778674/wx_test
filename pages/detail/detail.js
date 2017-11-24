@@ -112,7 +112,21 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    return {
+      title: '详情',
+      path: '/pages/detail/detail?id=123',
+      success: function (res) {
+        wx.updateShareMenu({
+          withShareTicket: true,
+          success(res) {
+            console.log(res);
+          }
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   },
 })
