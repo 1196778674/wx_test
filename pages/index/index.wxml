@@ -1,6 +1,6 @@
 
 <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: {{screenHeight}}">
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:for-index="i">
     <swiper-item>
       <view class='navigato-item'>
