@@ -68,7 +68,7 @@
               <input class="weui-input" name="user_phone" maxlength="11" type="number" value="" placeholder="请输入手机号"/>
           </view>
         </view>
-        <view class="weui-cell weui-cell_input">
+        <!-- <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd weui_radios">
               <radio-group class="radio-group" bindchange="radioChange">
                 <label class="radio">
@@ -79,7 +79,7 @@
                 </label>
               </radio-group>
           </view>
-        </view>
+        </view> -->
       </view>
     </view>
     <view class="modal-footer">
