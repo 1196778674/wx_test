@@ -1,1 +1,7 @@
-@import 'styles/weui.wxss';
+@import "./common/index.wxss";
+page{
+  height: 100%;
+}
+swiper{
+  height: 100%;
+}

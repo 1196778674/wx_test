@@ -1,4 +1,4 @@
-<!--pages/detail/detail.wxml-->
+<import src="../../common/footer.wxml" />
 <scroll-view>
   <view class="weui-banner">
     <image src='../../images/app.png'></image>
@@ -38,12 +38,6 @@
           <button class="weui-btn" type="primary" bindtap="openConfrim">预约</button>
         </view>
 </scroll-view>
-<view class="weui-footer">
-  <view class="weui-footer__links">
-      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
-  </view>
-  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
-</view>
 
 <!-- modal start -->
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
@@ -132,3 +126,5 @@
     </view>
   </view>
   <!-- error end  -->
+
+<template is="footer" />

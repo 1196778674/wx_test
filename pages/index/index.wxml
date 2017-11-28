@@ -1,4 +1,4 @@
-
+<import src="../../common/footer.wxml" />
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:for-index="i">
@@ -28,16 +28,8 @@
   </block>
 </swiper>
 
-<view class="weui-footer">
-  <view class="weui-footer__links">
-      <text class="weui-footer__link">由北京优翔国际生命院提供技术支持</text>
-  </view>
-  <view class="weui-footer__text">Copyright © 2008-2016 lavionlife.com</view>
-</view>
-
-
 <!-- modal start -->
- <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
   <form bindsubmit="onConfirm" class="modal-dialog" wx:if="{{showModal}}">
     <view class="modal-title">
       预约
@@ -85,10 +77,10 @@
     <view class="modal-footer">
       <button class="weui-btn btn-confirm" type="primary" formType="submit">预约</button>
     </view>
-  </form> 
+  </form>
   <!-- modal end  -->
 
-<!-- sucess start  -->
+  <!-- sucess start  -->
  <view class="modal-mask" wx:if="{{showSuccess}}"></view>
   <view class="modal-dialog" wx:if="{{showSuccess}}">
     <view class="modal-title">
@@ -123,3 +115,5 @@
     </view>
   </view>
   <!-- error end  -->
+
+<template is="footer" />
